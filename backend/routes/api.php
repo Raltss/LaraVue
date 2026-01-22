@@ -6,6 +6,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get(url: '/users', action: function (Request $request) {
-    return User::all();
+Route::get('/users', function (Request $request) {
+    return User::all(); 
 });
